@@ -1,0 +1,94 @@
+{
+  "basics": {
+    "name": "Rosina Flores Ruiz",
+    "headline": "Software Engineer",
+    "summary": "I am currently a software engineering student, with experience programming in several languages as C, Python, Java, JavaScript, SQL, .NET, and Selenium; and experience with HTML, CSS, Figma, AWS, MongoDB, Docker, Git/GitHub and UiPath Automation with StudioX and Orchestrator. Expected graduation date: December 2025.",
+    "avatar": "assets/images/avatar.jpg",
+  "links": [
+    { "label": "Email: rosinaflrz@gmail.com" },
+    { "label": "Phone: 66 99 94 96 23" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/rosinaflores" },
+    { "label": "GitHub", "url": "https://github.com/rosinaflrz" }
+  ]
+
+  },
+  "experience": [
+    {
+      "role": "RPA Developer Jr.",
+      "company": "Dataflix",
+      "period": "Sept 2024 – Apr 2025",
+      "highlights": [
+        "Monitoring and maintenance of automations for major companies (KIA, HYUNDAI).",
+        "Debugging diverse errors using UiPath Studio and Orchestrator."
+      ]
+    },
+    {
+      "role": "Report Developer Intern",
+      "company": "HP",
+      "period": "2023 – 2024",
+      "highlights": [
+        "Report creation with ThoughtSpot.",
+        "Project of organization and analysis of steps to follow for projects within the company."
+      ]
+    },
+    {
+      "role": "Data Restructuring (Project)",
+      "company": "SIAPA (with CONAFOR team)",
+      "period": "2020",
+      "highlights": [
+        "Creation of a database and data restructuring for SIAPA in collaboration with CONAFOR."
+      ]
+    }
+  ],
+  "education": [
+    { "degree": "Software Engineer", "institution": "ITESO (Instituto Tecnológico de Estudios Superiores de Occidente)", "year": "Dec 2025 (expected)" },
+    { "degree": "Biochemist Engineer", "institution": "Tecnológico Nacional de México", "year": "" }
+  ],
+  "skills": [
+    "Spanish (native)", "English (B2)",
+    "C", "Python", "Java", "JavaScript", "TypeScript",
+    "SQL (Query)", ".NET", "Node.js",
+    "HTML", "CSS3", "Figma",
+    "MongoDB", "Docker", "Git", "GitHub",
+    "UiPath Studio", "UiPath Orchestrator",
+    "AWS (EC2, S3, SNS, SQS, DynamoDB, Load Balancer)",
+    "Office", "JIRA", "Trello",
+    "Selenium"
+  ],
+  "projects": [
+    {
+      "name": "UiPath Academy Certification",
+      "description": "Automation Developer Associate Training (2024). StudioX and Orchestrator monitor/debug.",
+      "image": "assets/images/project-thumb.png"
+    },
+    {
+      "name": "Academic Exchange – NHL Stenden (Netherlands)",
+      "description": "1 semester in Leeuwarden (2024).",
+      "image": "assets/images/project-thumb.png"
+    },
+    {
+      "name": "Robotics Club ITESO",
+      "description": "LEGO EV3 and Python programming (2023).",
+      "image": "assets/images/project-thumb.png"
+    },
+    {
+      "name": "OSINT Course – ITESO",
+      "description": "Use of social networks and tech tools to search for people and solve cases (2022).",
+      "image": "assets/images/project-thumb.png"
+    },
+    {
+      "name": "Hackathon – ITESO",
+      "description": "Internal contest for Computer Systems career (2022).",
+      "image": "assets/images/project-thumb.png"
+    },
+    {
+      "name": "Database for Autobuses Star",
+      "description": "SQL-based system to record routes, times, dates, seats and passenger IDs (2021).",
+      "image": "assets/images/project-thumb.png"
+    }
+  ],
+  "contact": {
+    "emailTo": "rosinaflrz@gmail.com",
+    "provider": "formsubmit"
+  }
+}

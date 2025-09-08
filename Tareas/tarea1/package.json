@@ -1,0 +1,26 @@
+{
+  "name": "cv-webapp-tarea1",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicación web de CV con HTML, Sass y TS (opcional) usando Gulp como empaquetador/tareas.",
+  "scripts": {
+    "clean": "gulp clean",
+    "dev": "gulp dev",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "browser-sync": "^2.29.3",
+    "cssnano": "^6.1.2",
+    "del": "^7.1.0",
+    "esbuild": "^0.23.0",
+    "gulp": "^5.0.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^9.0.0",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.47",
+    "sass": "^1.79.4"
+  }
+}

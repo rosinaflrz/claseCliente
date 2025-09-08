@@ -1,0 +1,8 @@
+@use 'variables' as *;
+
+%card {
+  background: #14182b;
+  border-radius: $radius;
+  padding: 1rem;
+  box-shadow: $shadow;
+}

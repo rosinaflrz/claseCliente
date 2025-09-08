@@ -1,0 +1,38 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+@use 'functions' as fn;
+@use 'base';
+@use 'components';
+
+.hero { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; }
+.avatar { inline-size: 112px; block-size: 112px; border-radius: 50%; box-shadow: $shadow-lg; object-fit: cover; }
+
+.cards { display: grid; gap: 1rem; }
+.card { @extend %card; }
+
+.tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tag { @include pill; background: fn.tint($primary, 70%); color: $primary; }
+
+.grid { display: grid; grid-template-columns: repeat( auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.project { display: grid; grid-template-rows: auto 1fr; border-radius: $radius; overflow: hidden; box-shadow: $shadow; transition: transform .2s ease; }
+.project:hover { transform: translateY(-2px); }
+.project img { width: 100%; height: 160px; object-fit: cover; }
+.project__body { padding: 1rem; }
+
+.contact { display: grid; gap: 1rem; max-inline-size: 640px; }
+.field { display: grid; gap: .25rem; }
+
+.btn { @include button($primary); }
+.status { min-height: 1.5rem; }
+.status.error { color: $danger; }
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  .hero { grid-template-columns: 1fr; text-align: center; }
+  .avatar { margin-inline: auto; }
+}
+
+/* Container query (si el navegador lo soporta) */
+@container style(--narrow: true) {
+  .grid { grid-template-columns: 1fr; }
+}

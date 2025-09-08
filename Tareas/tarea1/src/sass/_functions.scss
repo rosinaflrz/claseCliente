@@ -1,0 +1,4 @@
+@use 'sass:color';
+@function tint($clr, $pct) {
+  @return color.mix(white, $clr, $pct);
+}

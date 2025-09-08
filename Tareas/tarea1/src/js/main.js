@@ -11,19 +11,38 @@ function byId(id) {
 }
 
 function renderBasics(b) {
-  byId('avatar').src = b.avatar;
+  // Si quieres usar foto de perfil, déjala en JSON; si no, la ocultamos
+  const avatar = byId('avatar');
+  if (b.avatar) {
+    avatar.src = b.avatar;
+    avatar.style.display = 'block';
+  } else {
+    avatar.style.display = 'none';
+  }
+
   byId('name').textContent = b.name;
   byId('footerName').textContent = b.name;
   byId('headline').textContent = b.headline;
 
   const links = byId('links');
   links.innerHTML = '';
+
   b.links.forEach((l) => {
     const li = document.createElement('li');
-    const a = document.createElement('a');
-    a.href = l.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-    a.textContent = l.label;
-    li.appendChild(a);
+    if (l.url) {
+      // Caso con link
+      const a = document.createElement('a');
+      a.href = l.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.textContent = l.label;
+      li.appendChild(a);
+    } else {
+      // Caso solo texto
+      const span = document.createElement('span');
+      span.textContent = l.label;
+      li.appendChild(span);
+    }
     links.appendChild(li);
   });
 }
@@ -45,7 +64,9 @@ function renderExperience(items) {
 
 function renderEducation(items) {
   const ul = byId('education');
-  ul.innerHTML = items.map((e) => `<li><strong>${e.degree}</strong> — ${e.institution} (${e.year})</li>`).join('');
+  ul.innerHTML = items
+    .map((e) => `<li><strong>${e.degree}</strong> — ${e.institution} ${e.year ? `(${e.year})` : ""}</li>`)
+    .join('');
 }
 
 function renderSkills(skills) {
@@ -56,17 +77,26 @@ function renderSkills(skills) {
 function renderProjects(ps) {
   const grid = byId('projects');
   grid.innerHTML = '';
+
   ps.forEach((p) => {
-    const a = document.createElement('a');
-    a.href = p.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
-    a.className = 'project';
-    a.innerHTML = `
+    // Si hay URL → <a>, si no → <article>
+    const container = document.createElement(p.url ? 'a' : 'article');
+    if (p.url) {
+      container.href = p.url;
+      container.target = '_blank';
+      container.rel = 'noopener noreferrer';
+    }
+    container.className = 'project';
+
+    container.innerHTML = `
       <img src="${p.image}" alt="${p.name}" />
       <div class="project__body">
         <h3>${p.name}</h3>
         <p>${p.description}</p>
-      </div>`;
-    grid.appendChild(a);
+      </div>
+    `;
+
+    grid.appendChild(container);
   });
 }
 
@@ -130,3 +160,4 @@ async function main() {
 }
 
 main();
+

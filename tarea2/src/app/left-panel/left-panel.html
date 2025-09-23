@@ -1,0 +1,10 @@
+<section class="panel">
+  <h2>Lista de Títulos</h2>
+  <ul>
+    <li *ngFor="let item of titles"
+        (click)="select(item)"
+        [class.selected]="item === selectedTitle">
+      {{ item }}
+    </li>
+  </ul>
+</section>

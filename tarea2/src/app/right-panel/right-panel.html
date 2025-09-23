@@ -1,0 +1,10 @@
+<section class="panel">
+  <h2>Detalles</h2>
+  <div *ngIf="selectedTitle; else noSel">
+    <p><strong>Seleccionado:</strong> {{ selectedTitle }}</p>
+    <button (click)="clearSelection.emit()">Limpiar</button>
+  </div>
+  <ng-template #noSel>
+    <p>No hay ningún elemento seleccionado.</p>
+  </ng-template>
+</section>

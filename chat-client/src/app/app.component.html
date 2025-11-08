@@ -1,0 +1,27 @@
+<h1 style="color: purple;">Angular está funcionando</h1>
+
+<div *ngIf="!isLoggedIn" class="card">
+  <h3>Ingresa tu nombre</h3>
+  <input [(ngModel)]="username" placeholder="Tu nombre" />
+  <button (click)="join()">Entrar</button>
+</div>
+
+<div *ngIf="isLoggedIn" class="chat">
+  <div id="messagesBox" class="messages">
+    <div class="notice" *ngFor="let n of systemNotices">🔔 {{ n }}</div>
+
+    <div class="message" *ngFor="let m of messages">
+      <span class="meta">{{ m.username }} • {{ formatTime(m.timestamp) }}</span>
+      <div class="bubble">{{ m.text }}</div>
+    </div>
+  </div>
+
+  <div class="composer">
+    <input
+      [(ngModel)]="newMessage"
+      (keyup.enter)="send()"
+      placeholder="Escribe un mensaje y presiona Enter"
+    />
+    <button (click)="send()">Enviar</button>
+  </div>
+</div>
